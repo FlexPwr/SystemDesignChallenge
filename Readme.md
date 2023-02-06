@@ -34,10 +34,6 @@ We have a third party data provider for all types of market data.
 
 For the purposes of this task, we are interested only in the so called **reference price**, which is the average price for a megawatthour sold on the exchange for a given hour.
 
-For example, if for the hour 12-13 on the 2023-02-06 at 2023-02-06T11:00:00Z, 354 deals took place on the exchange, the reference price would be
-```python
-sum(quantity * price for quantity, price in deals) / sum(quantity for quantity in deals)
-```
 If no deals happened yet for a given hour, the value is undefined.
 
 To access the data, the provider offers an API, with the following entrypoint:
@@ -93,11 +89,28 @@ paths:
 
 ## Reporting:
 
-The reporting frontend contains dashboards that display the following dashboards:
-- total bought quantity
-- total sold quantity
-- PnL
-- average realised price for a megawatt hour
-- green or red light icon, green if the trader's average realised price is higher than the reference price, red otherwise.
-
+The reporting frontend displays the following dashboard:
+![img.png](dashboard.png)
 It can be accessed by the traders from their browsers.
+
+## What is expected:
+This is an open challenge, it describes the environment in which this system evolves, the different interfaces with the 
+rest of the world and the functional outcome that we want to achieve. In architectural terms, this would be a black box view:
+![img_1.png](black_box.png)
+
+In other words, we don't have one solution in mind and there is no right or wrong answer, we are looking forward to a 
+discussion about a solution you think is appropriate.
+
+We are interested in how you would design such a system:
+- which components would you need? How do you decide on the boundaries between these components?
+- which databases or any other data management systems?
+- how would these components communicate with each other?
+- which technologies would you use for each component and why?
+- How and where would you run such a system? Which cloud services would you use?
+- How would you management updates and deployments in such a system?
+- Anything else that you think is relevant
+
+Please take some time to prepare an overview of your solution, we really like to use [miro](https://miro.com) as a digital whiteboard,
+but feel free to chose any medium you prefer.
+
+
