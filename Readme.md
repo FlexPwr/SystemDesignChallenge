@@ -86,12 +86,14 @@ paths:
                 type: string
                 example: "2023-02-06T09:15:45Z"
 ```
+The reference prices are updated every 10 minutes until the beginning of the delivery hour.
 
 ## Reporting:
 
 The reporting frontend displays the following dashboard:
 ![img.png](dashboard.png)
 It can be accessed by the traders from their browsers.
+The dashboard is updated with all the current values every 5 Minutes. 
 
 ## What is expected:
 This is an open challenge, it describes the environment in which this system evolves, the different interfaces with the 
