@@ -2,7 +2,9 @@
 
 ## Goal
 The goal of the challenge is to design a system that allows the trading team to visualise reports and metrics about their 
-trading activities on the power exchanges, so that they can visualise their performance and adjust their strategies.
+trading activities on the power exchanges. This tool provides traders with the instant feedback loop they need to adjust their strategies.
+
+Currently the trading team has 5 members but might go up to 15 over the next couple of years.
 
 ## Deals
 Deals are pushed to us from the exchange through a websocket connection. 
@@ -25,7 +27,9 @@ Assume she buys 12.3 megawatt within the hour 8 to 9 for 20.5 euros/megawatt-hou
 }
 ```
 
-It is essential that we maintain an open connection to the exchange at all times so that we don't miss any deals).
+It is essential that we maintain an open connection to the exchange at all times so that we don't miss any deals.
+
+We can receive up to a 100 trades per minute at the moment.
 
 
 ## Reference Price
@@ -86,33 +90,29 @@ paths:
                 type: string
                 example: "2023-02-06T09:15:45Z"
 ```
-The reference prices are updated every 10 minutes until the beginning of the delivery hour.
+The reference prices are updated every 10 minutes until the beginning of the delivery hour. The updates are sometimes published with some delay, usually something between 0 and 30 seconds.
 
 ## Reporting:
 
 The reporting frontend displays the following dashboard:
 ![img.png](dashboard.png)
-It can be accessed by the traders from their browsers.
-The dashboard is updated with all the current values every 5 Minutes. 
+It can be accessed by the traders from their browsers. Since this is the traders main feedback loop, they might get impatient around the time the reference price is supposed to be published and start massively refreshing their reporting dashboard.
 
 ## What is expected:
 This is an open challenge, it describes the environment in which this system evolves, the different interfaces with the 
-rest of the world and the functional outcome that we want to achieve. In architectural terms, this would be a black box view:
+rest of the world and the functional outcome that we need to achieve. In architectural terms, this would be a black box view:
 ![img_1.png](black_box.png)
 
-In other words, we don't have one solution in mind and there is no right or wrong answer, we are looking forward to a 
-discussion about a solution you think is appropriate.
+In other words, we don't have one solution in mind and there is no right or wrong answer, we are looking forward to a discussion about a solution you think is appropriate.
 
 We are interested in how you would design such a system:
 - which components would you need? How do you decide on the boundaries between these components?
-- which databases or any other data management systems?
+- which databases or any other data management systems would you use?
 - how would these components communicate with each other?
 - which technologies would you use for each component and why?
 - How and where would you run such a system? Which cloud services would you use?
-- How would you management updates and deployments in such a system?
-- Anything else that you think is relevant
+- How would you manageme updates and deployments in such a system?
+- Anything else that you think is relevant!
 
 Please take some time to prepare an overview of your solution, we really like to use [miro](https://miro.com) as a digital whiteboard,
 but feel free to chose any medium you prefer.
-
-
