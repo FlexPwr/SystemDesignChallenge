@@ -12,7 +12,7 @@ and consumers place orders to buy and sell energy. One of the major exchanges in
 Producers can be renewables like solar or wind assets or conventional like gas and coal. Consumers might include B2C energy providers or heavy industry.
 
 An order consist of a quantity (in MW, short for Megawatt) over a predefined period of
-time in the future, called **delivery range**, and for a given price (in euro/MWh, short for euro per megawatt hour).
+time in the future, called **delivery range**, and for a given price (in euro/MWh, short for euro per megawatt hour). Orders are submitted thourgh a desktop application.
 
 You can trade electricity for a given delivery range up to a point in time, called **gate closure** that is always prior to the **delivery start**. At a given point the delivery range available for trading goes up to the end of the next day.
 
