@@ -146,7 +146,7 @@ Some aspects that we are particularly interested in are:
 - how would these components communicate with each other?
 - which technologies would you use for each component and why?
 - How and where would you run such a system in the cloud? Which services would you use?
-- How would you manageme updates and deployments in such a system?
+- How would you manage updates and deployments in such a system?
 - How would you structure logging and monitoring?
 - Anything else that you think is relevant!
 
